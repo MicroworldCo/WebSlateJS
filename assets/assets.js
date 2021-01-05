@@ -1,8 +1,15 @@
 class assets{
     read(Path){
-        var file = new XMLHttpRequest();
-        file.open('GET',Path);
-        return file.responseText
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            var res = '';
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                window[res] = xhr.responseText;
+            }
+        }
+        xhr.open('GET', Path);
+        xhr.send();
+        return window[res];
     }
     split(string,splitter){
         
