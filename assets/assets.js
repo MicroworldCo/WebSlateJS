@@ -41,12 +41,12 @@ class assets{
     componentHtml(jsx,props){
         var jsxformat = jsx.replaceAll(/^(?=.*\${)(?=.*}).*$/im,'|');
         var propsList = jsxformat.split("|");
-        for(var i = 0;i<propList.length+1;){
-            if(propList[i].includes("props")){
-                var prop = propList[i].split('.');
+        for(var i = 0;i<propsList.length+1;){
+            if(propsList[i].includes("props")){
+                var prop = propsList[i].split('.');
                 var propProperty = prop[1];
                 var propVal = props[propProperty];
-                propList[i] = propVal;
+                propsList[i] = propVal;
             };
         };
         var commaHtml = propList.join();
