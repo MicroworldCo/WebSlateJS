@@ -37,9 +37,10 @@ class assets{
         // push the last string into the array 
         separatedArray.push(originalString.slice(previousIndex, i)); 
         }
+        return separatedArray;
     }
     componentHtml(jsx,props){
-        var jsxformat = jsx.replaceAll(/^(?=.*\${)(?=.*}).*$/im,'|');
+        var jsxformat = jsx.replaceAll(/^(?=.*{)(?=.*}).*$/im,'|');
         var propsList = jsxformat.split("|");
         for(var i = 0;i<propsList.length+1;){
             if(propsList[i].includes("props")){
