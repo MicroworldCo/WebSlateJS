@@ -4,7 +4,7 @@ class component{
     };
     getcomponentids(jsx){
         var ids = [];
-        var markup = jsx.replace('<','|').replace('>','|').split("|");
+        var markup = jsx.replaceAll('<','|').replaceAll('>','|').split("|");
         var counter = 0;
         var component = 0;
         for(counter<markup.length;counter++;){
