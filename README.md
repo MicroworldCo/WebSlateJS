@@ -1,4 +1,4 @@
-<img alt="WebSlate-Client" src="https://github.com/MicroworldCo/WebSlateJS/logo.png" width='356px' height="356px">
+<img alt="WebSlate-Client" src="https://github.com/MicroworldCo/WebSlateJS/blob/master/logo.png" width='356px' height="456px">
 A Full-Stack Web Framework with focus on simplicity, modularity, powerful features
 and performance.
 
