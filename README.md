@@ -7,7 +7,7 @@ and performance.
 * * *
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![npm downloads](https://github.com/MicroworldCo/WebSlateJS/logo.png)](https://www.npmjs.com/package/webslate-client)
+[![npm downloads:](https://github.com/MicroworldCo/WebSlateJS/blob/master/logo.png)](https://www.npmjs.com/package/webslate-client)
 
 
 * * *
@@ -30,4 +30,4 @@ For the server, use server workers.
 Well don't use it yet.
 It's still a work in progress.
 Use the soon to be released generator.
-for now just follow the project.
+For now just follow the project.
