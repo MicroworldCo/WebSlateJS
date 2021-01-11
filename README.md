@@ -6,7 +6,7 @@ and performance.
 * * *
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-<a herf="https://www.npmjs.com/package/webslate-client"><img src="https://img.shields.io/static/v1?label=npm%20downloads&message=Client&color=%3Cgreen%3E"></a>
+[![Download](https://img.shields.io/static/v1?label=npm%20downloads&message=Client&color=%3Cgreen%3E)](https://www.npmjs.com/package/webslate-client)
 
 
 * * *
