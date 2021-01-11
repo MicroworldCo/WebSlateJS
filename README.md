@@ -1,13 +1,11 @@
-# WebSlateJS
-<img alt="WebSlate" src="logo.png" width="356px">
-
+<img alt="WebSlate-Client" src="https://github.com/MicroworldCo/WebSlateJS/logo.png" width='356px'hight=""356px>
 A Full-Stack Web Framework with focus on simplicity, modularity, powerful features
 and performance.
 
 * * *
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![npm downloads:](https://github.com/MicroworldCo/WebSlateJS/blob/master/logo.png)](https://www.npmjs.com/package/webslate-client)
+<img src="https://img.shields.io/static/v1?label=npm%20downloads&message=Client&color=%3Cgreen%3E">
 
 
 * * *
