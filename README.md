@@ -5,7 +5,7 @@ and performance.
 
 * * *
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![License: GNU GPL](https://img.shields.io/badge/License-GNU%20GPL-brightgreen.svg)](https://opensource.org/licenses/GPL-3.0)
 [![Download](https://img.shields.io/static/v1?label=npm%20downloads&message=Client&color=%3Cgreen%3E)](https://www.npmjs.com/package/webslate-client)
 [![CodeFactor](https://www.codefactor.io/repository/github/microworldco/webslatejs/badge)](https://www.codefactor.io/repository/github/microworldco/webslatejs)
 
