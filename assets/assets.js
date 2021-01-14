@@ -12,4 +12,5 @@ export class assets{
         // eslint-disable-next-line no-undef
         return window[res];
     }
+    
 }
