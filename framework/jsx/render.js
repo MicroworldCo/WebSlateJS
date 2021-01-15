@@ -8,7 +8,7 @@ import componentLib from './framework/components.js';
     var componentFiles = {};
     var dataProvider = import(`localhost:3000/dataProviders/${dataProviderName}`);
     var componenthelper = new componentLib(components);
-    var html = [];
+    var html = new Map();
 
     for (var counter = 0;componentsLength+1>counter;counter++){
         var component = read(`http://localhost:3000/components/${components[counter]}`);
@@ -18,7 +18,7 @@ import componentLib from './framework/components.js';
         var id = componenthelper.getcomponentids(componentFiles.get(components[counter]));
         var props = dataProvider.getprops(id);
         var componenthtml = componenthelper.componentHtml(componentFiles.get(components[counter]),props);
-        html.push(componenthtml);
+        html.set(components[counter] , componenthtml);
     }
     return html;
 }

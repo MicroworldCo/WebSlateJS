@@ -1,3 +1,4 @@
+import render from './../framework/jsx/render'
 export class assets{
     read(Path){
         var xhr = new XMLHttpRequest();
@@ -11,6 +12,11 @@ export class assets{
         xhr.send();
         // eslint-disable-next-line no-undef
         return window[res];
+    }
+    page(page){
+        var components = render();
+        var mount = document.getElementById("root");
+        mount.innerHTML = components.get(page);
     }
     
 }
