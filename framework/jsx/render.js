@@ -1,25 +1,32 @@
-import { read,split }from './assets/assets.js';
-import componentLib from './framework/components.js';
-(function(){
-    var config = read('config/webslate.config');
-    var components = split(config.split(',').toString().replace(",",""),'\n')[0].split(',');
-    var dataProviderName = split(config.split(',').toString().replace(",",""),'\n')[1];
+import { assets }from './../../assets/assets.js';
+export default function(){
+    var assetsLib = new assets
+    var config = assetsLib.read('config/webslate.config').split("\n");
+
+    console.log(config)
+
+    var components = config[0].split(":")[1].split(',')
+    var dataProviderName = config[1].split(":")[1];
+    var domain = config[2].split(":")[1];
+    var port = config[3].split(":")[1];
     var componentsLength = components.length;
-    var componentFiles = {};
-    var dataProvider = import(`localhost:3000/dataProviders/${dataProviderName}`);
-    var componenthelper = new componentLib(components);
-    var html = new Map();
+    var componentFiles = new Map();
+    // import dataProvider
+    eval(assetsLib.import(`http://${domain}:${port}/dataProviders/${dataProviderName}`));
+
 
     for (var counter = 0;componentsLength+1>counter;counter++){
-        var component = read(`http://localhost:3000/components/${components[counter]}`);
+        var component = assetsLib.read(`http://${domain}:${port}/components/${components[counter]}.jsx`);
         componentFiles.set(components[counter],component);
     }
+
     for(counter = 0; componentFiles.size>counter;counter++){
-        var id = componenthelper.getcomponentids(componentFiles.get(components[counter]));
-        var props = dataProvider.getprops(id);
-        var componenthtml = componenthelper.componentHtml(componentFiles.get(components[counter]),props);
+        var id = assetsLib.getcomponentids(componentFiles.get(components[counter]),components);
+        var props = window.getprops(id);
+        var componenthtml = assetsLib.componentHtml(componentFiles.get(components[counter]),props);
         html.set(components[counter] , componenthtml);
     }
-    return html;
+
+    window.html = html;
+    return window.html;
 }
-);

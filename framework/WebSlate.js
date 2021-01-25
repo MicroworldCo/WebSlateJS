@@ -1,3 +1,4 @@
-import { page } from './../assets/assets';
+import { assets } from './../assets/assets.js';
 var path = document.location.pathname;
-page(path);
+var assetsLib = new assets()
+assetsLib.page(path);
