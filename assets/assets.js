@@ -1,6 +1,4 @@
 import render from './../framework/jsx/render.js'
-import "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-const $ = window.$;
 export function assets(){}
 assets.prototype.read = function(Path){
     var xhttp = new XMLHttpRequest();
@@ -65,7 +63,7 @@ assets.prototype.getid = function(html){
     return id;
 }
 assets.prototype.componentHtml = function(jsx,props){
-    var jsxformat = jsx.replaceAll(/^(?=.*{)(?=.*}).*$/im,'|');
+    var jsxformat = jsx.replaceAll('{','|').replaceAll('}','|');
     var propsList = jsxformat.split("|");
     for(var i = 0;i<propsList.length+1;){
         if(propsList[i].includes("props")){
@@ -83,13 +81,18 @@ assets.prototype.import = function(url){
     const file = this.read(url).split('\n');
     var safeJs = []
     for(var counter = 0;file.length>counter;counter++){
-        var line = file[counter];
-        const lastChar = line[line.length -1];
-        if(lastChar != ';' || '{' || '}'){
-            safeJs.push(`${line};`)
+        var line = file[counter].trim();
+        var lastChar = line[line.length -1];
+        console.log(lastChar);
+        // eslint-disable-next-line no-constant-condition
+        if(lastChar == '}' || '{' || ';'){
+            safeJs.push(line);
+        }else{
+            safeJs.push(`${line};`);
         }
     }
-    const JS = safeJs.join().replaceAll(',','');
+    const JS = safeJs.join('');
+    console.log(JS)
     return JS;
 }
     

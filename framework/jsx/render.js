@@ -11,6 +11,7 @@ export default function(){
     var port = config[3].split(":")[1];
     var componentsLength = components.length;
     var componentFiles = new Map();
+    var html = new Map();
     // import dataProvider
     eval(assetsLib.import(`http://${domain}:${port}/dataProviders/${dataProviderName}`));
 
