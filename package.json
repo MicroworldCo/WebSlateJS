@@ -27,7 +27,7 @@
     "benchmark": "^2.1.4",
     "buble": "^0.17.3",
     "eslint": "^7.17.0",
-    "eslint-config-xo-swizz": "^0.11.0",
+    "eslint-config-xo-swizz": "^0.12.0",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.3",
     "simple-git": "^1.92.0",
