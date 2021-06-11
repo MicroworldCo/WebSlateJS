@@ -29,7 +29,7 @@
     "eslint": "^7.17.0",
     "eslint-config-xo-swizz": "^0.11.0",
     "rimraf": "^2.6.1",
-    "rollup": "^0.41.3",
+    "rollup": "^2.51.2",
     "simple-git": "^1.92.0",
     "traceur": "^0.0.111",
     "typescript": "^2.3.2",
